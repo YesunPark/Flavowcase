@@ -12,19 +12,17 @@ import lombok.*;
 @AllArgsConstructor
 public class Member {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Long id; // 카카오 ID
 
-  @NotNull
   private String email;
 
-  @NotNull
   private String password;
 
-  @NotNull
   private String name;
 
   @NotNull
+  private String nickname;
+
   private String phone;
 }
 //
