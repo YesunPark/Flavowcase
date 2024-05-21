@@ -36,7 +36,6 @@ public class MemberController {
     로그인
      */
     @GetMapping("/kakao")
-//    public ResponseEntity<SigninResponse> kakaoSignin(@Valid @RequestBody SigninRequest request) {
     public ResponseEntity<KakaoInfoResponse>  kakaoSignin(@RequestParam String code) {
         KakaoInfoResponse response = memberService.kakaoSignin(code);
         return ResponseEntity.ok(response);
