@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class KakaoLoginResponse {
+public class KakaoTokenResponse {
 
     private String token_type;
     private String access_token;

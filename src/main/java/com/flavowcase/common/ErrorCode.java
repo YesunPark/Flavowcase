@@ -13,7 +13,7 @@ public enum ErrorCode {
     METHOD_ARGUMENT_TYPE_MISMATCH("메서드 매개변수의 타입이 맞지 않습니다.", BAD_REQUEST),
 //
 //    // Auth
-//    MEMBER_NOT_EXISTS("존재하지 않는 회원입니다.", BAD_REQUEST),
+    MEMBER_NOT_EXISTS("존재하지 않는 회원입니다.", BAD_REQUEST),
     EMAIL_ALREADY_EXISTS("이미 가입된 이메일입니다.", BAD_REQUEST);
 //    NICKNAME_ALREADY_EXISTS("이미 가입된 닉네임입니다.", BAD_REQUEST),
 //    PHONE_ALREADY_EXISTS("이미 가입된 휴대전화번호입니다.", BAD_REQUEST),

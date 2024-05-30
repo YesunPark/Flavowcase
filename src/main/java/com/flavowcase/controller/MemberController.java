@@ -1,6 +1,6 @@
 package com.flavowcase.controller;
 
-import com.flavowcase.dto.kakao.KakaoInfoResponse;
+import com.flavowcase.dto.KakaoLoginResponse;
 import com.flavowcase.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -36,8 +36,8 @@ public class MemberController {
     로그인
      */
     @GetMapping("/kakao")
-    public ResponseEntity<KakaoInfoResponse>  kakaoSignin(@RequestParam String code) {
-        KakaoInfoResponse response = memberService.kakaoSignin(code);
+    public ResponseEntity<KakaoLoginResponse>  kakaoSignin(@RequestParam String code) {
+        KakaoLoginResponse response = memberService.kakaoSignin(code);
         return ResponseEntity.ok(response);
     }
 }
