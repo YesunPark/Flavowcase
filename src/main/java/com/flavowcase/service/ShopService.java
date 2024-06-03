@@ -29,7 +29,6 @@ public class ShopService {
     @Transactional
     public Long createShop(String token, ShopCreateRequest request) {
         token = token.substring(AUTHORIZATION_HEADER.length());
-        System.out.println("-==============token: "+token);
         KakaoInfoResponse memberInfo = memberService.getMemberInfo(token);
         Long memberId = memberInfo.getId();
         Member member = memberRepository.findById(memberId).orElseThrow(
