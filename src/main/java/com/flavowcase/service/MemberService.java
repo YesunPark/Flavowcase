@@ -88,13 +88,13 @@ public class MemberService {
     public KakaoInfoResponse getMemberInfo(String token) {
         String kakaoToken = AUTHORIZATION_HEADER + token;
 
-        Flux<KakaoInfoResponse> response = webClient.post()
+        Flux<KakaoInfoResponse> kakaoResponse = webClient.post()
                 .uri(KAKAO_URI_INFO)
                 .header("Authorization", kakaoToken)
                 .contentType(APPLICATION_FORM_URLENCODED)
                 .retrieve()
                 .bodyToFlux(KakaoInfoResponse.class);
 
-        return response.blockFirst();
+        return kakaoResponse.blockFirst();
     }
 }

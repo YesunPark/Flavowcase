@@ -29,8 +29,9 @@ public class ShopService {
     @Transactional
     public Long createShop(String token, ShopCreateRequest request) {
         token = token.substring(AUTHORIZATION_HEADER.length());
-        System.out.println("-==============token: "+token);
+        System.out.println("-============== token: " + token);
         KakaoInfoResponse memberInfo = memberService.getMemberInfo(token);
+        System.out.println("memberInfo = " + memberInfo.toString());
         Long memberId = memberInfo.getId();
         Member member = memberRepository.findById(memberId).orElseThrow(
                 () -> new CustomException(MEMBER_NOT_EXISTS)

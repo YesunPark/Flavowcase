@@ -21,15 +21,12 @@ public class ShopController {
             @RequestBody ShopCreateRequest request
     ) {
         Long shopId = shopService.createShop(token, request);
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(ShopCreateResponse.builder()
                         .id(shopId)
-                        .build());
-    }
-
-    @GetMapping
-    public void shopDetail() {
-
+                        .build()
+                );
     }
 }
